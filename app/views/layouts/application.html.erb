@@ -1,14 +1,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GithubDiscovery</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Github Discovery</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#"><span class="logo float-shadow">GD</span></a>
+        <span class="navbar-brand project_name" href="#">GITHUB DISCOVERY</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">DASHBOARD</a></li>
+          <li><a href="#">SETTINGS</a></li>
+          <li><a href="#">PROFILE</a></li>
+          <li><a href="#">HELP</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
 
-<%= yield %>
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row descriptions">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+     </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+    <div class="discovery">
+      <h1>Trending Projects</h1>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-5 col-sm-offset-5 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-4 col-sm-offset-4 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-3 col-sm-offset-3 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+      
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-2 col-sm-offset-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-3 col-sm-offset-3 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-4 col-sm-offset-4 trendy_project">
+          <div class="selection"></div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+
+      <div class="row selections">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-5 col-sm-offset-5 trendy_project">
+          <div class="selection"></div>
+        </div>
+      </div>
+    </div><!-- /discovery -->
+
+    <div class="categories">
+      <h1>Categories</h1>
+      <div class="row">
+
+        <div class="col-md-4 category">
+          <div class="cover">FEATURED</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">DATA VISUALIZATION</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">GAMES</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 category">
+          <div class="cover">PRODUCTIVITY</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">MUSIC</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">DESIGN</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 category">
+          <div class="cover">DATABASE</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">PACKAGE MANAGERS</div>
+        </div>
+        <div class="col-md-4 category">
+          <div class="cover">SECURITY</div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /container -->
+
+  
+  <%= yield %>
 
 </body>
 </html>
