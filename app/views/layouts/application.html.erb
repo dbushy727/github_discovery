@@ -16,6 +16,39 @@
 <body>
   <span class="notice"><%= notice %></span>
   <span class="alert"><%= alert %></span>
+  <!-- HEADER -->
+  <div class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#"><span class="logo float-shadow">GD</span></a>
+        <span class="navbar-brand project_name" href="#">GITHUB DISCOVERY</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>   
+          <li><a href="#">DASHBOARD</a></li>
+          <li><a href="#">SETTINGS</a></li>
+          <li><a href="#">PROFILE</a></li>
+          <li><%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+          <li><a href="#">DASHBOARD</a></li>
+          <li><a href="#">SETTINGS</a></li>
+          <li><%= link_to "REGISTER", new_user_registration_path%></li>
+          <li><%= link_to "SIGN - IN", new_user_session_path%></li>
+        <% end %>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control">
+        </form>
+      </div>
+    </div>
+  </div><!-- /HEADER-->
   <%= yield %>
 
 </body>
