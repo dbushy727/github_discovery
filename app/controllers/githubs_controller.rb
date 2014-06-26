@@ -2,11 +2,14 @@ class GithubsController < ApplicationController
 
   def index
 
-    # get = HTTParty.get("https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc")
 
-    # @result = JSON.parse(get)
+    git = Github.new
+    @results = git.connect
 
-    @git = Github.new
+    # if not logged in send back to sign in page
+    if !current_user
+      redirect_to new_user_session_path
+    end
 
   end
 

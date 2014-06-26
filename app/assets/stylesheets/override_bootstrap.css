@@ -7,6 +7,9 @@
     color: inherit;
     letter-spacing: 3px;
   }
+  label {
+    font-weight: 200;
+  }
 
 /*NAVBAR*/
 .navbar {
@@ -138,8 +141,25 @@
   color: #fff;
   text-shadow: 2px 3px 1px black;
 }
+.sign_up, .sign_in {
+  padding-top: 40px;
+}
+.sign_in_box, .sign_up_box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.sign_in_box .new_user {
+  padding: 30px;
+}
+.sign_up_box .new_user {
+  padding: 10px;
+}
 
 
+/*ERROR HANDLING*/
+#error_explanation h2{
+  font-weight: 200;
+}
 /*EXTERNAL CSS*/
 
 /* Float Shadow */
