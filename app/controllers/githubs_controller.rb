@@ -1,11 +1,13 @@
 class GithubsController < ApplicationController
 
   def index
-    github = Github.new
-    client = github.connect
-    
-    @result = client
-    
+
+    # get = HTTParty.get("https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc")
+
+    # @result = JSON.parse(get)
+
+    @git = Github.new
+
   end
 
 end
