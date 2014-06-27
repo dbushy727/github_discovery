@@ -124,7 +124,7 @@
   background-image: url("dna.jpg");
   background-size: 100%;
   background-position: center;
-  height: 200px;
+  height: 150px;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   opacity: 0.8;
@@ -141,18 +141,21 @@
   color: #fff;
   text-shadow: 2px 3px 1px black;
 }
-.sign_up, .sign_in {
+.sign_up, .sign_in, .reset_password {
   padding-top: 40px;
 }
-.sign_in_box, .sign_up_box {
+.sign_in_box, .sign_up_box, .reset_box {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.sign_in_box .new_user {
+.sign_in_box .new_user, .reset_box .new_user {
   padding: 30px;
 }
 .sign_up_box .new_user {
   padding: 10px;
+}
+.reset_button {
+  margin-top: 1em;
 }
 
 
@@ -160,6 +163,9 @@
 #error_explanation h2{
   font-weight: 200;
 }
+
+
+
 /*EXTERNAL CSS*/
 
 /* Float Shadow */

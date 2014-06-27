@@ -4,7 +4,6 @@ class GithubsController < ApplicationController
 
 
     git = Github.new
-    @results = git.connect
 
     # if not logged in send back to sign in page
     if !current_user
