@@ -110,4 +110,13 @@
     </div>
   </div> <!-- /container -->
 
-  <%= @results %>
+  <% @results["items"].each do |item| %>
+    <% item.each do |key, value| %>
+      <ul><%= key %>
+        <li><%= value %></li>
+      </ul>
+      <%end%>
+  <% end %>
+  
+
+
