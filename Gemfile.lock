@@ -68,10 +68,10 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.16)
     octokit (3.1.2)
       sawyer (~> 0.5.3)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -138,8 +138,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   json
-  mysql2
   octokit (~> 3.0)
+  pg
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc
