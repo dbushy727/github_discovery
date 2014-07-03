@@ -2,11 +2,12 @@ GithubDiscovery::Application.routes.draw do
 
   devise_for :users
   resources :githubs
+  resources :features
 
   root :to => "githubs#index"
 
   get '/populate' => 'githubs#populate'
- 
+  get '/games' => 'githubs#games'
 
 #    Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
