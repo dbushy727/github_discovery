@@ -65,6 +65,18 @@
   }
 
 }
+
+.btn-default:hover  {
+  color: #fff;
+  background-color: #123;
+}
+.btn-default {
+  font-weight: 200;
+}
+.jumbotron p {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
 .logo {
   position: absolute;
   top: 4px;

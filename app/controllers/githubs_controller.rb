@@ -5,12 +5,16 @@ class GithubsController < ApplicationController
     if !current_user
       redirect_to new_user_session_path
     end
-
+    
     @trending_projects = Github.order("last_pushed desc").first(9)
 
   end
 
   def populate
+    if current_user.admin != true
+      redirect_to root_path
+    end
+
     git = Github.new
     javascript_results_stars = git.search_api("javascript","stars")
 
