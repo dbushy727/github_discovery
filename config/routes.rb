@@ -4,6 +4,8 @@ GithubDiscovery::Application.routes.draw do
   resources :githubs
 
   root :to => "githubs#index"
+
+  get '/populate' => 'githubs#populate'
  
 
 #    Prefix Verb   URI Pattern                    Controller#Action
