@@ -1,13 +1,7 @@
 class GithubsController < ApplicationController
 
   def index
-    # if not logged in send back to sign in page
-    if !current_user
-      redirect_to new_user_session_path
-    end
-
     @trending_projects = Github.order("last_pushed desc").first(9)
-
   end
 
   def populate
@@ -46,7 +40,7 @@ class GithubsController < ApplicationController
   end
 
   def games
-    
+
   end
 
 end
