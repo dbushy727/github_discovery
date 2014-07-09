@@ -46,7 +46,7 @@ class GithubsController < ApplicationController
   end
 
   def games
-
+    
   end
 
 end

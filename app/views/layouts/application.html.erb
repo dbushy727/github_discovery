@@ -15,8 +15,7 @@
 </head>
 <body>
   
-  <span class="notice"><%= notice %></span>
-  <span class="alert"><%= alert %></span>
+
   <!-- HEADER -->
   <div class="navbar navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -28,18 +27,16 @@
           <span class="icon-bar"></span>
         </button>
         <a href="/"><span class="logo float-shadow">GD</span></a>
-        <span class="navbar-brand project_name" href="#">GITHUB DISCOVERY</a>
+        <span class="navbar-brand project_name">GITHUB DISCOVERY</a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>   
-          <li><a href="#">DASHBOARD</a></li>
+          <li><a href="/dashboard">DASHBOARD</a></li>
           <li><a href="#">SETTINGS</a></li>
+        <% if current_user %>   
           <li><a href="#">PROFILE</a></li>
           <li><%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %></li>
         <% else %>
-          <li><a href="#">DASHBOARD</a></li>
-          <li><a href="#">SETTINGS</a></li>
           <li><%= link_to "REGISTER", new_user_registration_path%></li>
           <li><%= link_to "SIGN - IN", new_user_session_path%></li>
         <% end %>
@@ -50,7 +47,9 @@
       </div>
     </div>
   </div><!-- /HEADER-->
-  <%= yield %>
+  <div class="main_container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
