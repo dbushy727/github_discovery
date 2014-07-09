@@ -351,6 +351,11 @@
   border-top: 1px solid grey;
   margin-bottom: 1em;
 }
+.news_feed {
+  position: relative;
+  top: -1.5em;
+  left: 1.5em;
+}
 .news_feed:last-child{
   border-bottom: 1px solid grey;
 }
