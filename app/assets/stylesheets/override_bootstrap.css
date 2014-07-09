@@ -337,7 +337,6 @@
 }
 .news_heading {
   display: block;
-  background-color: #c7c7c7;
   height: 5em;
   width: 100%;
 }
@@ -350,11 +349,12 @@
 }
 .news_column {
   display: block;
-  background-color: dimgrey;
   height: 5em;
   border-top: 1px solid grey;
 }
-
+.news_column p {
+  margin-top: 1em;
+}
 
 
 
