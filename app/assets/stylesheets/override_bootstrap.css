@@ -352,6 +352,9 @@
   height: 5em;
   border-top: 1px solid grey;
 }
+.news_feed:last-child{
+  border-bottom: 1px solid grey;
+}
 .news_column p {
   margin-top: 1em;
 }
