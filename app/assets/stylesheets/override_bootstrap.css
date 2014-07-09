@@ -286,7 +286,7 @@
 .following_repo {
   height: 10.33em;
   /*background-color: purple;*/
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 0;
 }
 
@@ -325,7 +325,7 @@
 .mini_repo {
   height: 9em;
   /*background-color: darkblue;*/
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   padding: 0;
 }
 .mini_repo a img, .following_repo a img {
