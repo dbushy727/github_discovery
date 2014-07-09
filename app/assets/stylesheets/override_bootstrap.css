@@ -312,11 +312,9 @@
 .feature_repo .description {
   display: inline-block;
   /*background-color: green;*/
-  height: 7em;
-  width: 15em;
-  margin-left: 2em;
   font-weight: 200;
   letter-spacing: 1px;
+  margin-top: 2em;
 }
 .mini_repo_heading {
   height: 5em;
@@ -351,6 +349,7 @@
   display: block;
   height: 5em;
   border-top: 1px solid grey;
+  margin-bottom: 1em;
 }
 .news_feed:last-child{
   border-bottom: 1px solid grey;
