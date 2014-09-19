@@ -160,31 +160,63 @@
 }
 .categories {
   padding: 3em;
-  background: #eee;
 }
 .categories h1 {
   margin-bottom: 1em;
 }
 .category {
-  background-image: url("dna.jpg");
   background-size: 100%;
   background-position: center;
   height: 150px;
-  border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+/*  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;*/
   opacity: 0.8;
 }
 .category:hover {
   opacity:1;
 }
+.featured_category {
+  /*background-color: #abcdef;*/
+  background-color: #00a1cb;
+}
+.data_category {
+  background-color: #44bf87;
+}
+.games_category {
+  background-color: #fbd258;
+}
+.productivity_category {
+  background-color: #f29a3f;
+}
+.music_category {
+  background-color: #f04b55;
+}
+.design_category {
+  background-color: #f29a3f;
+}
+.db_category {
+  background-color: #fbd258;
+}
+.package_category {
+  background-color: #44bf87;
+}
+.security_category {
+  background-color: #00a1cb;
+}
+
+
+
+
+
+
 .cover {
   position: relative;
-  top: 35%;
+  top: 40%;
   text-align: center;
-  font-size: 2.1em;
-  font-weight: bold;
+  font-size: 1.7em;
+  font-weight: 100;
   color: #fff;
-  text-shadow: 2px 3px 1px black;
+  letter-spacing: 1px;
 }
 .sign_up, .sign_in, .reset_password {
   padding-top: 40px;
