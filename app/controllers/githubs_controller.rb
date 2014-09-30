@@ -1,7 +1,7 @@
 class GithubsController < ApplicationController
 
   def index
-    @trending_projects = Github.order("last_pushed desc").first(9)
+    @trending_projects = Github.select('distinct html_url, project_path, description, avatar_url, last_pushed').order("last_pushed desc").first(18)
   end
 
   def populate
