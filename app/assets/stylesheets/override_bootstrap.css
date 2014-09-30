@@ -17,7 +17,10 @@
   a {
     color: white;
   }
-
+  body {
+    background: url('octocat_wallpaper.jpg') no-repeat fixed;
+    background-position-x: 480px;   
+  }
 /*NAVBAR*/
 .navbar {
   background-color: #fff;
@@ -51,6 +54,8 @@
   background-color: #333;
 }
 
+
+/*HOMEPAGE*/
 .main_container {
   padding-top: 4em;
 }
@@ -85,6 +90,10 @@
   margin-left: 6.1em;
   margin-right: 6.1em;
   padding-top: 80px !important;
+
+}
+.jumbotron h1 {
+  font-size: 63px;
 }
 .descriptions {
   border: 1px solid #ccc;
@@ -167,11 +176,6 @@
 .security_category {
   background-color: #00a1cb;
 }
-
-
-
-
-
 
 .cover {
   position: relative;
@@ -418,6 +422,7 @@
   .jumbotron {
     margin: 0 2em 0 2em;
   }
+
 }
 
 
