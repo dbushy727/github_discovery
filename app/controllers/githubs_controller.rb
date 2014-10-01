@@ -14,6 +14,7 @@ class GithubsController < ApplicationController
 
     javascript_results_stars["items"].each do |item|
     n = Github.new
+
       n.username = item['owner']['login']
       n.github_id = item['id']
       n.project_path = item['full_name']
@@ -33,7 +34,10 @@ class GithubsController < ApplicationController
       n.last_pushed = item['updated_at']
       n.homepage = item['homepage']
 
-      n.save!
+      collaborators = n.get_collaborators(n.username, n.project_path)
+      p collaborators
+      n.collaborator_count = collaborators.length
+      # n.save!
 
       puts "Saved " + n.project_path + " to database!"
     end
@@ -41,6 +45,14 @@ class GithubsController < ApplicationController
 
   def games
 
+  end
+
+  def dashboard2
+    # if not logged in send back to sign in page
+    if !current_user
+      redirect_to new_user_session_path
+    end
+    @repos = Github.select('distinct html_url, project_path, description, avatar_url, forks, stargazers_count, watchers, last_pushed, collaborator_count').order("last_pushed desc").first(21)
   end
 
 end

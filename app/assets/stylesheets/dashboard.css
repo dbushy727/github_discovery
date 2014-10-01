@@ -1,0 +1,87 @@
+.dashboard_container {
+  margin-top: 3em;
+}
+.dash_left, .dash_right {
+  display: inline-block;
+  height: 500px;
+  overflow-y: scroll;
+}
+.dash_left {
+  background-color: #eee;
+}
+.headline {
+  background-color: #fff;
+  padding: 0.8em 1em;
+  margin: 0.8em 0;
+  font-size: 0.8em;
+}
+.news_link {
+  color: #000;
+  font-weight: 300;
+}
+.news_title {
+  font-weight: 500;
+  text-align: center;
+}
+.repo img{
+  width: 100%;
+}
+.repo {
+  border: 4px solid white;
+  padding: 0;
+}
+.repo_cover {
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  top: 0;
+  left: -2px;
+  background-color: #FFF;
+  opacity: 0.9;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 2em;
+  overflow-y: hidden;
+  display: none;
+}
+.repo_cover:hover {
+  display: block;
+}
+.repo_title {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 0.5em;
+  word-wrap: break-word;
+}
+.repo_details {
+  font-size: 0.3em;
+  font-weight: 300;
+  color: rgb(109, 109, 109);
+  text-align: center;
+}
+.repo_details div {
+  padding: 3px;
+}
+.repo_description {
+ height: 50%;
+ font-size: 0.4em;
+ font-weight: 300;
+ margin-top: 1em;
+ overflow-y: hidden;
+}
+
+@media(max-width: 600px) {
+  .repo_description {
+    font-size: 0.3em;
+  }
+}
+@media(max-width: 460px) {
+  .repo_description {
+    font-size: 0.2em;
+  }
+  .project_name {
+    display: none;
+  }
+  
+}

@@ -19,6 +19,7 @@ gem 'json'
 gem "octokit", "~> 3.0"
 gem 'devise'
 gem 'rails_12factor', group: :production
+gem 'pry'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

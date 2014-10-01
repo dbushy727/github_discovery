@@ -11,6 +11,12 @@ class Github < ActiveRecord::Base
     return result
   end
 
+  def get_collaborators(owner,repo)
+    api_string = "https://api.github.com/repos/#{owner}/#{repo}/collaborators"
+    result = HTTParty.get(api_string, headers: {"User-Agent" => "github_discovery"})
+    return result
+  end
+
 end
 
 

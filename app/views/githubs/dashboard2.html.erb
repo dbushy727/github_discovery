@@ -1,0 +1,88 @@
+<div class="container dashboard_container">
+  <div class="col-sm-4 col-xs-6 dash_left">
+    <div class="news">
+      <div class="headline news_title">
+        YCombinator: Hacker News
+      </div>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+      <a href="#" class="news_link">
+        <div class="headline">Atlantic.net launches $0.99 SSD-based VPS servers</div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-8 col-xs-6 dash_right">
+    <div class="repos">
+      <div class="row"> 
+      <% @repos.each do |repo| %>
+        <div class="repo col-sm-4">
+          <img src="<%= repo.avatar_url %>" alt="">
+          <a href="#">
+            <div class="repo_cover">
+              <div class="repo_title col-xs-12"><%= repo.project_path %></div>
+              <div class="repo_details col-xs-12">
+                <div class="forks col-xs-4">
+                  <span class="octicon octicon-repo-forked"></span>
+                  <div class="number"><%= repo.forks %></div>
+                </div>
+                <div class="contributors col-xs-4">
+                  <span class="octicon octicon-organization"></span>
+                  <div class="number"><%= repo.collaborator_count %></div>
+                </div>
+                <div class="stars col-xs-4">
+                  <span class="octicon octicon-star"></span>
+                  <div class="number"><%= repo.stargazers_count %></div>
+                </div>
+              </div>
+              <div class="repo_description col-xs-12"><%= repo.description %></div>
+            </div>
+          </a>
+        </div>
+      <% end #end each %>
+      </div>
+    </div>
+  </div>
+</div>

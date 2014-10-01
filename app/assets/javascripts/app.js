@@ -22,7 +22,15 @@ function navbarFix() {
     }
   });
 }
+function showRepoInfo() {
+  $('.repo').on("mouseenter", function(e) {
+    $(this).find('.repo_cover').show();
+  })
+  $('.repo').on("mouseleave", function(e) {
+    $(this).find('.repo_cover').hide();
+  })
+}
 $(function(){
   navbarFix();
-  adjustBackground();
+  showRepoInfo();
 });
