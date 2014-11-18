@@ -13,7 +13,7 @@
       <% @repos.each do |repo, repo_info|%>
         <div class="repo col-sm-4">
           <img src="<%= repo_info['avatar_url'] %>" alt="">
-          <a href="#">
+          <a href="<%= repo_info['html_url'] %>">
             <div class="repo_cover">
               <div class="repo_title col-xs-12"><%= repo_info['full_name'] %></div>
               <div class="repo_details col-xs-12">
