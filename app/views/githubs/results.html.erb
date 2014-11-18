@@ -1,50 +1,37 @@
-<div class="container">
-
-  <div class="searching">Searching: <%= @search.gsub("%20", " ") %></div>
-
-  <!-- Go through all repos in search -->
-  <% @results["items"].each do |result|%>
-    <!-- One Repo Row -->
-    <div class="search_repo row">
-      
-      <!-- Left Block -->
-      <div class="search_repo_left search_repo_block col-sm-4">
-        <div class="search_repo_title">Name: <%= result['full_name'] %></div>
-        <a target="_BLANK" href="<%= result['html_url'] %>"><img class="search_repo_image" src="<%= result['owner']['avatar_url'] %>"></a>
-      </div>
-
-      <!-- Right Block -->
-      <div class="search_repo_right search_repo_block col-sm-6">
-        <div class="description">Description: <%= result['description'] %></div>
-
-        <div class="icon_group">
-
-          <div class="watchers icon_group_item">
-            <div class="watcher_icon"><i class="fa fa-3x fa-eye"></i></div>
-            <div class="watcher_count"><%= result['watchers'] %></div>
-          </div>
-
-          <div class="forks icon_group_item">
-            <div class="fork_icon"><i class="fa fa-3x fa-code-fork"></i></div>
-            <div class="fork_count"><%= result['forks'] %></div>
-          </div>
-
-          <div class="download_repo icon_group_item">
-            <a class="download_repo_link" href="<%= result['html_url']+"/archive/master.zip" %>">
-              <div class="clone_icon"><i class="fa fa-3x fa-cloud-download"></i></div>
-              <div>Download Zip</div>
-            </a>
-          </div>
-
+<div class="container dashboard_container">
+  <div class="results_per_page">
+    <label>Page Results: </label>
+    <select name="limit" id="results_limit">
+      <option id="option_10" value="10" >10</option>
+      <option id="option_25" value="25">25</option>
+      <option id="option_50" value="50">50</option>
+    </select>
+  </div>
+  <div class="col-sm-12 dash_right">
+    <div class="repos">
+      <div class="row"> 
+      <% @repos.each do |repo, repo_info|%>
+        <div class="repo col-sm-4">
+          <img src="<%= repo_info['avatar_url'] %>" alt="">
+          <a href="#">
+            <div class="repo_cover">
+              <div class="repo_title col-xs-12"><%= repo_info['full_name'] %></div>
+              <div class="repo_details col-xs-12">
+                <div class="forks col-xs-4">
+                  <span class="octicon octicon-repo-forked"></span>
+                  <div class="number"><%= repo_info['forks'] %></div>
+                </div>
+                <div class="stars col-xs-4 col-xs-offset-4">
+                  <span class="octicon octicon-star"></span>
+                  <div class="number"><%= repo_info['watchers'] %></div>
+                </div>
+              </div>
+              <div class="repo_description col-xs-12"><%= repo_info['description'] %></div>
+            </div>
+          </a>
         </div>
-        
-        <% if result['homepage'] && result['homepage'] != '' %>
-          <div class="homepage"><a href="<%= result['homepage'] %>">Visit Homepage</a></div>
-        <% end %>
-        <% if result['language'] && result['language'] != '' %>
-          <div class="language">Language: <%= result['language'] %></div>
-        <% end %>
+      <% end #end each %>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>

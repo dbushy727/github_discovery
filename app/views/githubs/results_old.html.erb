@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="searching">Searching: <%= @search.gsub("%20", " ") %></div>
+
+  <!-- Go through all repos in search -->
+  <% @results["items"].each do |result|%>
+    <!-- One Repo Row -->
+    <div class="search_repo row">
+      
+      <!-- Left Block -->
+      <div class="search_repo_left search_repo_block col-sm-4">
+        <div class="search_repo_title">Name: <%= result['full_name'] %></div>
+        <a target="_BLANK" href="<%= result['html_url'] %>"><img class="search_repo_image" src="<%= result['owner']['avatar_url'] %>"></a>
+      </div>
+
+      <!-- Right Block -->
+      <div class="search_repo_right search_repo_block col-sm-6">
+        <div class="description">Description: <%= result['description'] %></div>
+
+        <div class="icon_group">
+
+          <div class="watchers icon_group_item">
+            <div class="watcher_icon"><i class="fa fa-3x fa-eye"></i></div>
+            <div class="watcher_count"><%= result['watchers'] %></div>
+          </div>
+
+          <div class="forks icon_group_item">
+            <div class="fork_icon"><i class="fa fa-3x fa-code-fork"></i></div>
+            <div class="fork_count"><%= result['forks'] %></div>
+          </div>
+
+          <div class="download_repo icon_group_item">
+            <a class="download_repo_link" href="<%= result['html_url']+"/archive/master.zip" %>">
+              <div class="clone_icon"><i class="fa fa-3x fa-cloud-download"></i></div>
+              <div>Download Zip</div>
+            </a>
+          </div>
+
+        </div>
+        
+        <% if result['homepage'] && result['homepage'] != '' %>
+          <div class="homepage"><a href="<%= result['homepage'] %>">Visit Homepage</a></div>
+        <% end %>
+        <% if result['language'] && result['language'] != '' %>
+          <div class="language">Language: <%= result['language'] %></div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

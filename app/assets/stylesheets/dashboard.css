@@ -26,6 +26,9 @@
 .repo img{
   width: 100%;
 }
+.octicon {
+  font-size: 2em;
+}
 .repo {
   border: 4px solid white;
   padding: 0;
@@ -51,11 +54,11 @@
 .repo_title {
   text-align: center;
   margin-top: 5%;
-  font-size: 0.5em;
+  font-size: 1em;
   word-wrap: break-word;
 }
 .repo_details {
-  font-size: 0.3em;
+  font-size: 1em;
   font-weight: 300;
   color: rgb(109, 109, 109);
   text-align: center;

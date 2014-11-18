@@ -48,9 +48,26 @@ class GithubsController < ApplicationController
   end
 
   def results
-    @search = params[:search].gsub(" ","%20")
     github = Github.new
-    @results = github.search_api(@search, "starts", "none", 25)
+    @search = params[:search].gsub(" ","%20")
+    params[:limit] ? limit = params[:limit] : limit = 25
+    results = github.search_api(@search, "starts", "none", limit)
+    @repos = {}
+
+    results['items'].each do |repo|
+      repo_name = repo['full_name']
+
+      @repos[repo_name] = {
+        "full_name"           => repo['full_name'],
+        "html_url"            => repo['html_url'],
+        "avatar_url"          => repo['owner']['avatar_url'],
+        "description"         => repo['description'],
+        "forks"               => repo['forks'],
+        "watchers"            => repo['stargazers_count'],
+        "username"            => repo['owner']['login']
+      }
+
+    end
   end
 
   def dashboard2
