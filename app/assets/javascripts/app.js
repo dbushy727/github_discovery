@@ -28,7 +28,7 @@ function setSplashSize() {
 
   var splash_text_top = window_height - 360;
   $('.jumbotron').css("top",splash_text_top);
-  console.log(splash_text_top);
+
 
   $(window).on("resize",function(e) {
     var window_height = $(window).height();
@@ -36,7 +36,7 @@ function setSplashSize() {
     
     var splash_text_top = window_height - 360;
     $('.jumbotron').css("top",splash_text_top);
-    console.log(splash_text_top);
+
   });
 }
 function switchNavBar() {
