@@ -29,15 +29,28 @@ function setSplashSize() {
   
   if ($(window).width() > 600) {
     var splash_text_top = window_height - 360;
-    $('.jumbotron').css("top",splash_text_top);
+    $('.jumbotron').css({
+      "margin-top": splash_text_top,
+      "padding": "60px 0 15px 0"
+    });
 
   } else {
     $('.jumbotron').css({
-      "top"             : "100px",
+      "margin-top"      : "100px",
       "background-color": "rgba(0,0,0,0.5)",
       "padding"         : "1em"
     });
   }
+
+  if($(window).height() < 600) {
+    $('.jumbo_parent').css("height","auto");
+    $('.jumbotron p').css("font-size","1em");
+    $('.jumbotron h1').css("font-size","3em");
+  } else {
+    $('.jumbotron p').css("font-size","1.5em");
+    $('.jumbotron h1').css("font-size","4.5em");
+  }
+
 
 
   $(window).on("resize",function(e) {
@@ -48,15 +61,25 @@ function setSplashSize() {
     if ($(window).width() > 600) {
       var splash_text_top = window_height - 360;
       $('.jumbotron').css({
-        "top":splash_text_top,
-        "background-color": "rgba(0,0,0,0)"
+        "margin-top":splash_text_top,
+        "background-color": "rgba(0,0,0,0)",
+        "padding": "60px 0 15px 0"
       });
     } else {
       $('.jumbotron').css({
-        "top"             : "100px",
+        "margin-top"      : "100px",
         "background-color": "rgba(0,0,0,0.5)",
         "padding"         : "1em"
       });
+    }
+
+    if($(window).height() < 600) {
+      $('.jumbo_parent').css("height","auto");
+      $('.jumbotron p').css("font-size","1em");
+      $('.jumbotron h1').css("font-size","3em");
+    } else {
+      $('.jumbotron p').css("font-size","1.5em");
+      $('.jumbotron h1').css("font-size","4.5em");
     }
 
   });
