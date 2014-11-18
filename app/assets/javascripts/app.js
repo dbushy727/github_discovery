@@ -4,12 +4,12 @@ function navbarFix() {
     if(!$('.main_container').hasClass("mobile") ) {
       $('.main_container').addClass("mobile");
       $('.main_container').animate({
-        paddingTop: "22em"
+        paddingTop: "21em"
       }, 250);
     } else {
       $('.main_container').removeClass("mobile");
       $('.main_container').animate({
-        paddingTop: "4em"
+        paddingTop: "0"
       }, 250);
     }
   });
