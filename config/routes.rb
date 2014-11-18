@@ -6,9 +6,10 @@ GithubDiscovery::Application.routes.draw do
 
   root :to => "githubs#index"
 
-  get '/populate' => 'githubs#populate'
-  get '/games' => 'githubs#games'
+  get '/populate'   => 'githubs#populate'
+  get '/games'      => 'githubs#games'
   get '/dashboard'  => 'githubs#dashboard2'
+  get '/results'    => 'githubs#results'
 
 #    Prefix Verb   URI Pattern                    Controller#Action
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new

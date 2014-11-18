@@ -48,8 +48,9 @@ class GithubsController < ApplicationController
   end
 
   def results
-    @search = params[:search]
-
+    @search = params[:search].gsub(" ","%20")
+    github = Github.new
+    @results = github.search_api(@search, "starts", "none", 25)
   end
 
   def dashboard2

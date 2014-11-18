@@ -1,11 +1,3 @@
-function adjustBackground() {
-  $(window).on("resize", function(e) {
-    var window_width = $(window).width();
-    var background_position = (window_width / 2.6).toString();
-    console.log(background_position);
-    $('body').css("background-position-x", background_position+"px");
-  });
-}
 function navbarFix() {
   $('.navbar-toggle').on("click", function(e) {
 
@@ -30,7 +22,39 @@ function showRepoInfo() {
     $(this).find('.repo_cover').hide();
   })
 }
+function setSplashSize() {
+  var window_height = $(window).height();
+  $('.jumbo_parent').height(window_height);
+
+  var splash_text_top = window_height - 360;
+  $('.jumbotron').css("top",splash_text_top);
+  console.log(splash_text_top);
+
+  $(window).on("resize",function(e) {
+    var window_height = $(window).height();
+    $('.jumbo_parent').height(window_height);
+    
+    var splash_text_top = window_height - 360;
+    $('.jumbotron').css("top",splash_text_top);
+    console.log(splash_text_top);
+  });
+}
+function switchNavBar() {
+  var navbar_height = $('.navbar').height();
+  $(window).on("scroll", function(e) {
+    var window_height = $(window).height();
+    var trigger_height = window_height - navbar_height;
+    if (window.scrollY >= trigger_height) {
+      $('.navbar').css("background-color", "#fff");
+    }
+    else {
+      $('.navbar').css("background-color", "rgba(0,0,0,0)");
+    }
+  });
+}
 $(function(){
   navbarFix();
   showRepoInfo();
+  setSplashSize();
+  switchNavBar();
 });

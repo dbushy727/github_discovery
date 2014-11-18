@@ -20,7 +20,6 @@
 
 /*NAVBAR*/
 .navbar {
-  background-color: #fff;
   border-bottom: 2px solid #333;
 }
 .navbar-nav>li>a {
@@ -53,9 +52,9 @@
 
 
 /*HOMEPAGE*/
-.main_container {
-  padding-top: 4em;
-}
+/*.main_container {
+  padding-top: 3em;
+}*/
 .btn-default:hover  {
   color: #123;
   background-color: #fff;
@@ -68,6 +67,7 @@
 .jumbotron p {
   font-weight: 200;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 3px #333;
 }
 .logo {
   position: absolute;
@@ -87,10 +87,23 @@
   margin-left: 6.1em;
   margin-right: 6.1em;
   padding-top: 80px !important;
-
+  background: none;
+  text-align: right;
+  color: white;
+  position: relative;
+}
+.splash {
+  height: 100%;
+  background: url("splash.jpg") no-repeat fixed center center;
+  background-size: cover;
 }
 .jumbotron h1 {
   font-size: 63px;
+}
+.jumbo_parent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
 }
 .descriptions {
   border: 1px solid #ccc;
@@ -360,8 +373,40 @@
   margin-top: 1em;
 }
 
-
-
+/*SEARCH RESULTS PAGE*/
+.search_repo {
+  /*background-color: beige;*/
+  padding: 1em;
+  margin: 1em;
+  border: 3px solid black;
+}
+.search_repo_left {
+  /*background-color: green;*/
+}
+.search_repo a {
+  color: blue;
+}
+.search_repo a:hover {
+  color: darkblue;
+}
+.search_repo_right {
+  /*background-color: red;*/
+}
+.search_repo_image {
+  width: 90%;
+}
+.icon_group_item {
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: top;
+  text-align: center;
+}
+a.download_repo_link {
+  color: black;
+}
+a.download_repo_link:hover {
+  color: #777;
+}
 /*MEDIA QUERIES*/
 @media (max-width: 869px) {
 
