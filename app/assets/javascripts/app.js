@@ -25,7 +25,7 @@ function showRepoInfo() {
 function setSplashSize() {
   var window_height = $(window).height();
   $('.jumbo_parent').height(window_height);
-  $('.dash_right').height(window_height-75);
+  $('.dash_right').height(window_height-95);
   
   if ($(window).width() > 600) {
     var splash_text_top = window_height - 360;
@@ -56,7 +56,7 @@ function setSplashSize() {
   $(window).on("resize",function(e) {
     var window_height = $(window).height();
     $('.jumbo_parent').height(window_height);
-    $('.dash_right').height(window_height-75);
+    $('.dash_right').height(window_height-95);
     
     if ($(window).width() > 600) {
       var splash_text_top = window_height - 360;
