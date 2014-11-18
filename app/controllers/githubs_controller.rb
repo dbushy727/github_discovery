@@ -47,6 +47,11 @@ class GithubsController < ApplicationController
 
   end
 
+  def results
+    @search = params[:search]
+
+  end
+
   def dashboard2
     # if not logged in send back to sign in page
     if !current_user
