@@ -2,9 +2,9 @@ class Github < ActiveRecord::Base
 
   def search_api(search, sort = "stars", language = "none", limit = 100)
     if language == "none"
-      api_string = "https://api.github.com/search/repositories?q=#{search}&sort=#{sort}&order=desc&per_page=#{limit}"
+      api_string = "https://api.github.com/search/repositories?q=#{search}&sort=#{sort}&order=asc&per_page=#{limit}"
     else
-      api_string = "https://api.github.com/search/repositories?q=#{search}+language:#{language}&sort=#{sort}&order=desc&per_page=#{limit}"
+      api_string = "https://api.github.com/search/repositories?q=#{search}+language:#{language}&sort=#{sort}&order=asc&per_page=#{limit}"
     end
 
     result = HTTParty.get(api_string, headers: {"User-Agent" => "github_discovery"})

@@ -86,10 +86,12 @@ function setSplashSize() {
 }
 function setLimitSelector() {
   var get_vars = window.location.search;
-  var limit = get_vars.split("&")[1].split("=")[1];
-  $('#option_'+limit).attr("selected","selected");
+  if (get_vars != '') {
+    var limit = get_vars.split("&")[1].split("=")[1];
+    $('#option_'+limit).attr("selected","selected");
 
-  selectResultsLimit();
+    selectResultsLimit();
+  }
 }
 function selectResultsLimit() {
   $('#results_limit').on("change", function(e) {
@@ -100,10 +102,17 @@ function selectResultsLimit() {
     window.location.href = "/results/?search="+search_string+"&limit="+limit;
   });
 }
+function formSubmission() {
+  $('.category_form').on("click", function(e) {
+    console.log("clicked");
+    $(this).submit();
+  });
+}
 
 $(function(){
+  setSplashSize();
   navbarFix();
   showRepoInfo();
-  setSplashSize();
+  formSubmission();
   setLimitSelector();
 });
